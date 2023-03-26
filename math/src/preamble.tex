@@ -1,0 +1,135 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%    Packages and libraries                                              %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%  Packages that provide the document structure, fonts, and symbols needed to 
+%%  write mathematical formulae.
+\usepackage{amsmath, amsfonts, amssymb}
+
+%%  Package that provides theorem-like environments.
+\usepackage{amsthm}
+
+%%  Package required to write bold symbols in math mode.
+\usepackage{bm}
+
+%%  Package required to add color to text.
+\usepackage{color}
+
+%%  Package required to comment out multiple lines.
+\usepackage{comment}
+
+%%  Package required to insert images.
+\usepackage{graphicx}
+
+%%  Package required to create hypertext links.
+\usepackage{hyperref}
+\usepackage{pxjahyper}
+\hypersetup{
+    colorlinks=true, 
+    citecolor=blue, 
+    linkcolor=blue, 
+    urlcolor=blue
+}
+
+%%  Packege that provides environments for colored and framed text boxes.
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+
+%%  Package required to split a file.
+\usepackage{subfiles}
+
+%%  Package required to draw diagrams.
+\usepackage{tikz}
+
+%%  Physics package simplifies the writing of mathematical formulae.
+\usepackage{physics}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%    Settings of style                                                   %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%  Enabling page breaks in math environment
+\allowdisplaybreaks[4]
+
+%%  Style of bibliography
+\bibliographystyle{junsrt}
+
+%%  Format of enumerate environment
+\renewcommand{\labelenumi}{(\arabic{enumi})}
+
+%%  Format of footnote
+\renewcommand{\thefootnote}{*\arabic{footnote}}
+
+%%  Numbering
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+%%  Format of theorem-like environment
+\theoremstyle{definition}
+
+%%  Definition environment
+\newtheorem{define}{定義}[section]
+\newenvironment{definition}{
+    \begin{tcolorbox}[
+        sharp corners, 
+        colback=blue!10, 
+        colframe=white, 
+        breakable=true
+    ]
+    \begin{define}
+}{
+    \end{define}
+    \end{tcolorbox}
+}
+
+%%  Proposition environment
+\newtheorem{prop}{命題}[section]
+\newenvironment{proposition}{
+    \begin{tcolorbox}[
+        sharp corners, 
+        colback=red!10, 
+        colframe=white, 
+        breakable=true
+    ]
+    \begin{prop}
+}{
+    \end{prop}
+    \end{tcolorbox}
+}
+
+%%  Theorem environment
+\newtheorem{thm}[prop]{定理}
+\newenvironment{theorem}{
+    \begin{tcolorbox}[
+        sharp corners, 
+        colback=red!10, 
+        colframe=white, 
+        breakable=true
+    ]
+    \begin{thm}
+}{
+    \end{thm}
+    \end{tcolorbox}
+}
+
+%%  Proof environment
+\renewcommand{\proofname}{\textgt{証明}}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%    Other Commands                                                      %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%  Constant
+\newcommand{\const}{\mathrm{const.}}
+
+
+
+

@@ -1,11 +1,11 @@
 ## Core latex/pdflatex auxiliary files:
-*.aux
+# *.aux
 *.lof
 *.log
 *.lot
 *.fls
-*.out
-*.toc
+# *.out
+# *.toc
 *.fmt
 *.fot
 *.cb
@@ -25,7 +25,7 @@
 .pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
-*.bbl
+# *.bbl
 *.bcf
 *.blg
 *-blx.aux
